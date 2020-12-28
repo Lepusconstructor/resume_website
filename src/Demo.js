@@ -7,12 +7,15 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 
-const PostCard02 = () => (
-  <Card className={"MuiPostCard--02"}>
+
+const PostCard02 = (props) => (
+   
+ 
+  (<Card className={"MuiPostCard--02"}>
     <CardMedia
       className={"MuiCardMedia-root"}
       image={
-        "https://github.com/honeyyusuf/tinyapp/blob/master/doc/creatnewurl.png?raw=true"
+        props.project.image
       }
     />
     <CardContent className={"MuiCardContent-root"}>
@@ -24,15 +27,20 @@ const PostCard02 = () => (
         variant={"h6"}
         gutterBottom
       >
-        Tinyapp
+        {props.project.name} 
       </Typography>
       <Typography className={"MuiTypography--subheading"}>
-      TinyApp is a full stack web application built with Node and Express that allows users to shorten long URLs
+      {props.project.desc}
       </Typography>
-      <Button onClick="location.href='https://github.com/honeyyusuf/tinyapp';" className={"MuiButton--readMore"}>See Code</Button>
+      
+      <Button className={"MuiButton--readMore"}
+      onClick={event =>  window.location.href=props.project.address}
+      >See Code</Button>
     </CardContent>
-  </Card>
+  </Card>)
+  
 );
+
 
 PostCard02.getTheme = muiBaseTheme => ({
   MuiCard: {
@@ -40,27 +48,27 @@ PostCard02.getTheme = muiBaseTheme => ({
       "&.MuiPostCard--02": {
         borderRadius: muiBaseTheme.spacing.unit * 2, // 16px
         transition: "0.3s",
-        boxShadow: "0px 14px 80px rgba(34, 35, 58, 0.2)",
+        boxShadow: "14px 14px 80px rgba(34, 35, 58, 0.2)",
         width: "95%",
         position: "relative",
         maxWidth: 800,
-        marginLeft: "auto",
+        margin: "60px auto",
         overflow: "initial",
         background: "#ffffff",
         display: "flex",
         alignItems: "center",
-        padding: `${muiBaseTheme.spacing.unit * 4}px 0`,
+        padding: `${muiBaseTheme.spacing.unit * 2}px`,
         "&:hover": {
-          transform: "translateY(-3px)",
+          transform: "translateY(-6px)",
           boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)"
         },
         "& .MuiCardMedia-root": {
           flexShrink: 0,
-          width: "60%%",
-          paddingTop: "48%",
+          width: "65%",
+          paddingTop: "50%",
           transform: "translateX(-24%)",
-          boxShadow: "4px 4px 20px 1px rgba(252, 56, 56, 0.2)",
-          borderRadius: muiBaseTheme.spacing.unit * 2, // 16
+          boxShadow: "4px 4px 10px 1px rgba(252, 56, 56, 0.2)",
+          borderRadius: muiBaseTheme.spacing.unit * 1, // 16
           backgroundImage: "linear-gradient(147deg, #fe8a39 0%, #fd3838 74%)",
           backgroundColor: muiBaseTheme.palette.common.white,
           overflow: "hidden",
@@ -78,7 +86,7 @@ PostCard02.getTheme = muiBaseTheme => ({
         },
         "& .MuiCardContent-root": {
           textAlign: "left",
-          paddingLeft: 0,
+          //paddingLeft: 0,
           padding: muiBaseTheme.spacing.unit * 2
         },
         "& .MuiTypography--heading": {
@@ -104,5 +112,6 @@ PostCard02.metadata = {
   description: "Personal Post",
   credit: "https://codemyui.com/gradient-card-ui-image-info-slider/"
 };
+
 
 export default PostCard02;

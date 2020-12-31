@@ -5,6 +5,7 @@ import { createGenerateClassName } from "@material-ui/core/styles";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 import Demo from "./Demo.js";
+import Nav from "./navbar.js";
 
 
 
@@ -46,14 +47,17 @@ function App() {
   
   return (
     <JssProvider generateClassName={generateClassName}>
+      <Nav/>
       <MuiThemeProvider
         theme={createMuiTheme({
           typography: {
             useNextVariants: true
           },
           overrides: Demo.getTheme(muiBaseTheme)
+
         })}
-      >{
+      >  
+        {
         projects.map((project)=>{
           return <Demo project={project}/>
         })

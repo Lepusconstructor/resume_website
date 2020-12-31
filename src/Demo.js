@@ -54,7 +54,7 @@ PostCard02.getTheme = muiBaseTheme => ({
         maxWidth: 800,
         margin: "60px auto",
         overflow: "initial",
-        background: "#ffffff",
+        background: "#2a113bff",
         display: "flex",
         alignItems: "center",
         padding: `${muiBaseTheme.spacing.unit * 2}px`,
@@ -64,9 +64,9 @@ PostCard02.getTheme = muiBaseTheme => ({
         },
         "& .MuiCardMedia-root": {
           flexShrink: 0,
-          width: "65%",
-          paddingTop: "50%",
-          transform: "translateX(-24%)",
+          width: "50%",
+          paddingTop: "40%",
+          transform: "translateX(-10%)",
           boxShadow: "4px 4px 10px 1px rgba(252, 56, 56, 0.2)",
           borderRadius: muiBaseTheme.spacing.unit * 1, // 16
           backgroundImage: "linear-gradient(147deg, #fe8a39 0%, #fd3838 74%)",
@@ -87,21 +87,24 @@ PostCard02.getTheme = muiBaseTheme => ({
         "& .MuiCardContent-root": {
           textAlign: "left",
           //paddingLeft: 0,
-          padding: muiBaseTheme.spacing.unit * 2
+          padding: muiBaseTheme.spacing.unit * 2,
+          color:"white"
         },
         "& .MuiTypography--heading": {
-          fontWeight: "bold"
+          fontWeight: "bold",
+          color:"white"
         },
         "& .MuiTypography--subheading": {
           marginBottom: muiBaseTheme.spacing.unit * 2
         },
         "& .MuiButton--readMore": {
-          backgroundImage: "linear-gradient(147deg, #fe8a39 0%, #fd3838 74%)",
+          //backgroundImage: "linear-gradient(147deg, #fe8a39 0%, #fd3838 74%)",
+          background:"#0b032dff",
           boxShadow: "0px 4px 32px rgba(252, 56, 56, 0.4)",
           borderRadius: 100,
           paddingLeft: 24,
           paddingRight: 24,
-          color: "#ffffff"
+          color: "#c4fff9ff"
         }
       }
     }

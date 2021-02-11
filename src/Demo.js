@@ -1,5 +1,5 @@
 
-  /* eslint-disable max-len,no-script-url,jsx-a11y/anchor-is-valid */
+/* eslint-disable max-len,no-script-url,jsx-a11y/anchor-is-valid */
 import React from "react";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
@@ -9,8 +9,10 @@ import Typography from "@material-ui/core/Typography";
 
 
 const PostCard02 = (props) => (
-   
- 
+
+
+
+
   (<Card className={"MuiPostCard--02"}>
     <CardMedia
       className={"MuiCardMedia-root"}
@@ -20,25 +22,26 @@ const PostCard02 = (props) => (
     />
     <CardContent className={"MuiCardContent-root"}>
       <Typography className={"MuiTypography--date"} variant={"overline"}>
-         October  2020
+        October  2020
       </Typography>
       <Typography
         className={"MuiTypography--heading"}
         variant={"h6"}
         gutterBottom
       >
-        {props.project.name} 
+        {props.project.name}
       </Typography>
       <Typography className={"MuiTypography--subheading"}>
-      {props.project.desc}
+        {props.project.desc}
       </Typography>
-      
+
       <Button className={"MuiButton--readMore"}
-      onClick={event =>  window.location.href=props.project.address}
+        onClick={event => window.location.href = props.project.address}
       >See Code</Button>
     </CardContent>
   </Card>)
-  
+
+
 );
 
 
@@ -88,18 +91,18 @@ PostCard02.getTheme = muiBaseTheme => ({
           textAlign: "left",
           //paddingLeft: 0,
           padding: muiBaseTheme.spacing.unit * 2,
-          color:"white"
+          color: "white"
         },
         "& .MuiTypography--heading": {
           fontWeight: "bold",
-          color:"white"
+          color: "white"
         },
         "& .MuiTypography--subheading": {
           marginBottom: muiBaseTheme.spacing.unit * 2
         },
         "& .MuiButton--readMore": {
           //backgroundImage: "linear-gradient(147deg, #fe8a39 0%, #fd3838 74%)",
-          background:"#0b032dff",
+          background: "#0b032dff",
           boxShadow: "0px 4px 32px rgba(252, 56, 56, 0.4)",
           borderRadius: 100,
           paddingLeft: 24,

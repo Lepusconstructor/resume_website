@@ -1,0 +1,71 @@
+.image1 {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 20px 20px;
+}
+.image1 img {
+  width: 250px;
+  height: 250px;
+  border-radius: 60%;
+  margin: 20px 20px;
+}
+.image2 img {
+  width: 100px;
+  height: 100px;
+  margin: 10px 10px;
+}
+.image3 img {
+  width: 100px;
+  height: 100px;
+  margin: 10px 10px;
+}
+.image4 img {
+  width: 100px;
+  height: 100px;
+  margin: 10px 10px;
+}
+.image5 img {
+  width: 100px;
+  height: 100px;
+  margin: 10px 10px;
+}
+.image6 img {
+  width: 100px;
+  height: 100px;
+  margin: 10px 10px;
+}
+.image7 img {
+  width: 100px;
+  height: 100px;
+  margin: 10px 10px;
+}
+.image8 img {
+  width: 100px;
+  height: 100px;
+  margin: 10px 10px;
+}
+.image9 img {
+  width: 100px;
+  height: 100px;
+  margin: 10px 10px;
+}
+.head {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.head h3 {
+  align-self: center;
+}
+.head p {
+  align-self: center;
+  margin: 10px 30px;
+}
+.skills {
+  display: flex;
+  align-self: center;
+}
+.title h3 {
+  text-align: center;
+}
